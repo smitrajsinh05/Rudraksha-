@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rudraksha Ayurvedic Case Sheet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; padding: 10px; max-width: 600px; margin: auto; }
+    h2 { color: darkgreen; }
+    label { display: block; margin-top: 10px; }
+    input, textarea, select { width: 100%; padding: 5px; margin-top: 5px; }
+    .section { border-top: 1px solid #ccc; margin-top: 20px; padding-top: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>🩺 Rudraksha Ayurvedic Case Sheet</h2>
+
+<form id="caseForm">
+
+  <div class="section">
+    <h3>🧑 Patient Details (रोगी विवरण)</h3>
+    <label>Full Name (पूरा नाम): <input type="text" name="name"></label>
+    <label>Age (आयु): <input type="number" name="age"></label>
+    <label>Gender (लिंग): 
+      <select name="gender">
+        <option>Male (पुरुष)</option>
+        <option>Female (स्त्री)</option>
+        <option>Other (अन्य)</option>
+      </select>
+    </label>
+    <label>Date (तिथि): <input type="date" name="date"></label>
+  </div>
+
+  <div class="section">
+    <h3>🔥 Prakriti & Vikriti (प्रकृति / विकृति)</h3>
+    <label>Prakriti (स्वभाव): 
+      <select name="prakriti">
+        <option>Vata</option>
+        <option>Pitta</option>
+        <option>Kapha</option>
+        <option>Vata-Pitta</option>
+        <option>Vata-Kapha</option>
+        <option>Pitta-Kapha</option>
+      </select>
+    </label>
+    <label>Agni (Digestive Power / अग्नि): 
+      <select name="agni">
+        <option>Sama</option>
+        <option>Tikshna</option>
+        <option>Manda</option>
+        <option>Vishama</option>
+      </select>
+    </label>
+    <label>Ahar Shakti (Appetite / आहार शक्ति): <input type="text" name="ahar"></label>
+    <label>Nidra (Sleep / निद्रा): <input type="text" name="nidra"></label>
+  </div>
+
+  <div class="section">
+    <h3>🩻 Presenting Complaints (मुख्य लक्षण)</h3>
+    <textarea name="complaints" rows="3" placeholder="e.g. Constipation, Gas, Joint Pain..."></textarea>
+  </div>
+
+  <div class="section">
+    <h3>🧾 Nidan (Causative Factors / निदान)</h3>
+    <textarea name="nidan" rows="2"></textarea>
+  </div>
+
+  <div class="section">
+    <h3>🩺 Samprapti & Diagnosis (सम्प्राप्ति / रोग)</h3>
+    <label>Diagnosis (रोग नाम): <input type="text" name="diagnosis"></label>
+    <label>Dosha Involved (दोष): <input type="text" name="dosha"></label>
+    <label>Srotas Affected (स्रोतस): <input type="text" name="srotas"></label>
+  </div>
+
+  <div class="section">
+    <h3>🧪 Suggested Medicines (औषधि)</h3>
+    <textarea name="medicines" rows="3"></textarea>
+  </div>
+
+  <div class="section">
+    <h3>🧘 Chikitsa + Panchakarma (चिकित्सा / पंचकर्म)</h3>
+    <textarea name="chikitsa" rows="3"></textarea>
+  </div>
+
+  <div class="section">
+    <h3>📆 Follow-up & Advice (अनुसरण)</h3>
+    <label>Follow-up Date (पुनः तिथि): <input type="date" name="followup"></label>
+    <textarea name="advice" rows="2" placeholder="Pathya-Apathya, Lifestyle..."></textarea>
+  </div>
+
+</form>
+
+</body>
+</html>
