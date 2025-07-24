@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayurvedic Disease List – Rudraksha Hospital</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #fdfaf6;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #4B2E2E;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #e4cda1;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f4ef;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      th {
+        position: sticky;
+        top: 0;
+        background-color: #e4cda1;
+      }
+      td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ayurvedic Diseases List<br><span style="font-size: 16px;">(English + संस्कृतम्)</span></h1>
+
+  <input type="text" id="search" placeholder="Search disease...">
+
+  <table id="diseaseTable">
+    <thead>
+      <tr>
+        <th>English Name</th>
+        <th>Sanskrit Name (संस्कृतम्)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Fever</td><td>Jwara (ज्वर)</td></tr>
+      <tr><td>Cough</td><td>Kasa (कास)</td></tr>
+      <tr><td>Cold</td><td>Pratishyaya (प्रतिश्याय)</td></tr>
+      <tr><td>Headache</td><td>Shirashoola (शिर:शूल)</td></tr>
+      <tr><td>Constipation</td><td>Vibandha (विबन्ध)</td></tr>
+      <tr><td>Diarrhea</td><td>Atisara (अतिसार)</td></tr>
+      <tr><td>Diabetes</td><td>Prameha (प्रमेह)</td></tr>
+      <tr><td>Arthritis</td><td>Sandhigata Vata (सन्धिगत वात)</td></tr>
+      <tr><td>Rheumatoid Arthritis</td><td>Aamavata (आमवात)</td></tr>
+      <tr><td>Sciatica</td><td>Gridhrasi (गृध्रसी)</td></tr>
+      <tr><td>Asthma</td><td>Tamaka Shwasa (तमक श्वास)</td></tr>
+      <tr><td>Hypertension</td><td>Raktagata Vata (रक्तगत वात)</td></tr>
+      <tr><td>Skin Allergy</td><td>Twak Vikara (त्वक विकार)</td></tr>
+      <tr><td>Piles</td><td>Arsha (अर्श)</td></tr>
+      <tr><td>Kidney Stone</td><td>Ashmari (अश्मरी)</td></tr>
+      <tr><td>Dysmenorrhea</td><td>Kashtartava (कष्टार्तव)</td></tr>
+      <tr><td>Leucorrhoea</td><td>Shweta Pradara (श्वेत प्रदर)</td></tr>
+      <tr><td>Anemia</td><td>Pandu (पाण्डु)</td></tr>
+      <tr><td>Obesity</td><td>Sthoulya (स्थूल्य)</td></tr>
+      <tr><td>Infertility (Male)</td><td>Shukraksheenata (शुक्रक्षीणता)</td></tr>
+      <tr><td>Infertility (Female)</td><td>Vandhyatva (वंध्यत्व)</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const table = document.getElementById('diseaseTable');
+    const rows = table.getElementsByTagName('tr');
+
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase();
+      for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        let show = false;
+        for (let j = 0; j < cells.length; j++) {
+          if (cells[j].innerText.toLowerCase().includes(filter)) {
+            show = true;
+            break;
+          }
+        }
+        rows[i].style.display = show ? '' : 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
